@@ -18,8 +18,6 @@ describe('Request handler', () => {
     const requests = [msg, msg, msg];
 
     const readableStream = requestEmitter<MsgType>(requests);
-    const response = await RequestHandler(readableStream);
-
-    console.log(1111111111111111111, response);
+    await RequestHandler(readableStream);
   });
 });

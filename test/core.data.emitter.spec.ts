@@ -1,10 +1,9 @@
+import {expect} from 'chai';
 import {
   getSchema,
   prepareRequest,
   requestEmitter,
 } from '../src/core/core.data.emitter';
-
-import {expect} from 'chai';
 import {RequestRaw, SchemaType} from '../src/core/core.data.types';
 
 import * as path from 'path';
