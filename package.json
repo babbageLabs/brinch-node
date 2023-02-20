@@ -18,9 +18,9 @@
     "compile": "tsc -b",
     "comoile:watch": "tsc -b -w",
     "fix": "gts fix",
-    "prepare": "npm.cmd run compile",
-    "pretest": "npm.cmd run compile",
-    "posttest": "npm.cmd run lint"
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
