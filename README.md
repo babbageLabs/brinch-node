@@ -1,4 +1,8 @@
+[![Coverage Status](https://coveralls.io/repos/github/babbageLabs/brinch-node/badge.svg?branch=master)](https://coveralls.io/github/babbageLabs/brinch-node?branch=master)
+
+
 # Usage
+
 
 ## Installation
 
