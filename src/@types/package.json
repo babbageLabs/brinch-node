@@ -1,0 +1,15 @@
+{
+  "name": "@types/brinch",
+  "version": "1.0.0",
+  "description": "Type definitions for brinch",
+  "main": "",
+  "dependencies": {
+    "zod": "^3.11.6"
+  },
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "babbageLabs",
+  "license": "MIT"
+}

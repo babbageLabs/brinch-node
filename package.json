@@ -1,0 +1,48 @@
+{
+  "name": "brinch-node",
+  "version": "0.0.0",
+  "description": "A request/response library for Node.js",
+  "main": "src/index.ts",
+  "types": "src/index.d.ts",
+  "files": [
+    "build/src"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [],
+  "scripts": {
+    "start": "node lib/src/index.js",
+    "test": "nyc mocha --timeout 5000",
+    "coverage": "npm run test && nyc report --reporter=text-lcov | coveralls",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc -b",
+    "comoile:watch": "tsc -b -w",
+    "fix": "gts fix",
+    "prepare": "npm.cmd run compile",
+    "pretest": "npm.cmd run compile",
+    "posttest": "npm.cmd run lint"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.13.0",
+    "@types/node-fetch": "^2.6.2",
+    "@types/uuid": "^9.0.0",
+    "chai": "^4.3.7",
+    "coveralls": "^3.1.1",
+    "gts": "^3.1.1",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "playwright": "^1.30.0",
+    "ts-node": "^10.9.1",
+    "typescript": "~4.7.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "uuid": "^9.0.0",
+    "zod": "^3.20.6"
+  },
+  "engines": {
+    "node": ">=16.4.0"
+  }
+}

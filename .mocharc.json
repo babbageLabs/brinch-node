@@ -1,0 +1,11 @@
+{
+  "extension": ["ts"],
+  "spec": "test/**/*.spec.ts",
+  "require": "ts-node/register",
+  "timeout": 30000,
+  "exit": true,
+  "recursive": true,
+  "file": [
+    "./test/setup-env-hook.ts"
+  ]
+}

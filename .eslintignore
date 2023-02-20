@@ -1,0 +1,7 @@
+build/
+data/
+playwright-report/
+.github
+.idea
+lib/
+src/*.js
