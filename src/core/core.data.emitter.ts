@@ -11,6 +11,7 @@ import {
 import {z} from 'zod';
 import {v4 as uuidv4} from 'uuid';
 import {getAppConfig} from './core.app.configuration';
+import * as path from 'path';
 
 /*
  * Resolve the schema for a given method
@@ -20,7 +21,7 @@ export const getSchema = (
   schemaType: SchemaType,
   config: SchemaConfig
 ): z.Schema => {
-  const endpoint: AppEndpoint = require(`${config.path}/${method}`);
+  const endpoint: AppEndpoint = require(path.join(config.path, method));
   return endpoint[schemaType];
 };
 

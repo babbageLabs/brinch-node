@@ -3,12 +3,21 @@
  */
 import {AppConfiguration} from './core.data.types';
 import * as process from 'process';
+import * as path from 'path';
+
+const normalizeFilePath = (filePath: string): string => {
+  if (path.isAbsolute(filePath)) {
+    return filePath;
+  }
+  return path.join(process.cwd(), filePath);
+};
 
 export const getAppConfig = (): AppConfiguration => {
-  console.log('SCHEMA_DIR', process.env.SCHEMA_DIR);
   return {
     schema: {
-      path: process.env.SCHEMA_DIR || '',
+      path: normalizeFilePath(
+        process.env.SCHEMA_DIR || path.join(process.cwd(), 'schemas')
+      ),
     },
   };
 };

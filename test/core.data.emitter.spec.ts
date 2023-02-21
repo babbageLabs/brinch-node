@@ -8,6 +8,7 @@ import {RequestRaw, SchemaType} from '../src/core/core.data.types';
 
 import * as path from 'path';
 import {Readable} from 'stream';
+import * as process from 'process';
 
 describe('Data Emmit', () => {
   interface MsgType {
@@ -20,7 +21,7 @@ describe('Data Emmit', () => {
     const method = 'test.method.ts';
 
     const schema = getSchema(method, SchemaType.Request, {
-      path: path.join(__dirname, 'testData'),
+      path: path.join(process.cwd(), 'test', 'testData'),
     });
     expect(schema).to.be.an('object');
   });
@@ -30,14 +31,16 @@ describe('Data Emmit', () => {
 
     const schema = () =>
       getSchema(method, SchemaType.Request, {
-        path: path.join(__dirname, 'testData'),
+        path: path.join(process.cwd(), 'test', 'testData'),
       });
     expect(schema).to.throw();
   });
 
   it('should prepare a valid request given a method the right args', () => {
     const request = prepareRequest<MsgType>('test.method.ts', test, {
-      schema: {path: path.join(__dirname, 'testData')},
+      schema: {
+        path: path.join(process.cwd(), 'test', 'testData'),
+      },
     });
 
     expect(request).to.be.an('object');
