@@ -1,4 +1,5 @@
-import {Readable, Transform, pipeline} from 'stream';
+import {Readable, Transform} from 'stream';
+import {pipeline} from 'stream/promises';
 import CoreRequestHandler from '../core/core.request.handler';
 import {validateRequest} from '../middleware/core.validate.request';
 import {dbProcessRequest} from '../middleware/db.process.request';

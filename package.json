@@ -16,7 +16,7 @@
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc -b",
-    "comoile:watch": "tsc -b -w",
+    "compile:watch": "tsc -b -w",
     "fix": "gts fix",
     "pretest": "npm run lint"
   },
