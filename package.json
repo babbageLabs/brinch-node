@@ -11,14 +11,15 @@
   "keywords": [],
   "scripts": {
     "start": "node lib/src/index.js",
-    "test": "nyc mocha --timeout 5000",
-    "coverage": "npm run test && nyc report --reporter=text-lcov | coveralls",
+    "test": "nyc --timeout 5000 --reporter=text mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc -b",
     "compile:watch": "tsc -b -w",
     "fix": "gts fix",
-    "pretest": "npm run lint"
+    "pretest": "npm run lint",
+    "posttest": "npm run coverage"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
