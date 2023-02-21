@@ -5,3 +5,5 @@ yarn.lock
 src/*.js
 .nyc_output
 lib
+coverage
+```
